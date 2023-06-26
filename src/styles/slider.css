@@ -1,8 +1,50 @@
-.slider {}
+:root {
+    --sliderHeight: 400px;
+}
 
-.slider  .slider__slides{}
 
-.slider  .slider__slide {}
+.slider {
+    background-color: peru;
+    margin-top: 300px;
+    overflow: hidden;
+    width: 100%;
+    min-height: var(--sliderHeight);
+}
+
+.slider  .slider__slides{
+    position: relative;
+}
+
+.slider  .slider__slide {
+    width: 100%;
+    min-height: var(--sliderHeight);
+    position: absolute;
+    top: 0;
+}
+
+.slider  .slider__slide:first-child {
+    background-image: url("../images/slide-1.webp");
+    left: 0;
+}
+
+.slider  .slider__slide:nth-child(2) {
+    background-image: url("../images/slide-2.webp");
+    left: 100%;
+}
+
+.slider  .slider__slide:last-child {
+    background-image: url("../images/slide-3.webp");
+    left: 200%;
+}
+
+.slider .slider__box {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .slider  .slider__hdl {}
 .slider  .slider__lead {}
 .slider  .slider__link {}
